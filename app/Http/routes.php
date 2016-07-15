@@ -14,3 +14,26 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Add a route for managing shortened urls
+ *
+ * This includes both viewing and processing the form, for adding
+ * new shortened urls, and updating existing urls.
+ */
+Route::match(
+    ['get', 'post'],
+    '/manage-url/{uuid?}',
+    'UrlController@manageUrl'
+)->where(
+    ['uuid' => '[a-f0-9\-]+']
+)->name(
+    'manage-route'
+);
+
+Route::get(
+    '/view-urls',
+    'UrlController@viewUrls'
+)
+->where(['uuid' => '[a-f0-9\-]+'])
+->name('view-urls');
