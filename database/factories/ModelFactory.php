@@ -19,3 +19,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Url::class, function (Faker\Generator $faker) {
+    return [
+        'shortened_url' => $faker->email,
+        'original_url' => $faker->safeEmail
+    ];
+});
+
