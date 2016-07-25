@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+        Zenapply\Shortener\ShortenerServiceProvider::class
 
     ],
 
@@ -206,6 +207,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Shortener' => \Zenapply\Shortener\Facades\Shortener::class,
 
     ],
 
