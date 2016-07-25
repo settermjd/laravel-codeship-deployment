@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eacaf71fe4508316fba621d4cec6f524",
-    "content-hash": "d3124744e0d647d83d3bb82d13ba8069",
+    "hash": "b085f738cc5e18991839ff755b09e180",
+    "content-hash": "c0d12e5f28d00fcb0bcdf4eda8418349",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -162,6 +162,177 @@
             "time": "2015-11-06 14:35:42"
         },
         {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.3.1",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2016-07-15 17:22:37"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-05-18 16:56:05"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "PSR-7 message implementation",
+            "keywords": [
+                "http",
+                "message",
+                "stream",
+                "uri"
+            ],
+            "time": "2016-06-24 23:00:38"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -308,16 +479,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.39",
+            "version": "5.2.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c2a77050269b4e03bd9a735a9f24e573a7598b8a"
+                "reference": "29ba2e310cfeb42ab6545bcd81ff4c2ec1f6b5c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c2a77050269b4e03bd9a735a9f24e573a7598b8a",
-                "reference": "c2a77050269b4e03bd9a735a9f24e573a7598b8a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/29ba2e310cfeb42ab6545bcd81ff4c2ec1f6b5c2",
+                "reference": "29ba2e310cfeb42ab6545bcd81ff4c2ec1f6b5c2",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +545,8 @@
                 "illuminate/support": "self.version",
                 "illuminate/translation": "self.version",
                 "illuminate/validation": "self.version",
-                "illuminate/view": "self.version"
+                "illuminate/view": "self.version",
+                "tightenco/collect": "self.version"
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
@@ -433,7 +605,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-06-17 19:25:12"
+            "time": "2016-07-20 13:13:06"
         },
         {
             "name": "laravelcollective/html",
@@ -491,16 +663,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.24",
+            "version": "1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "9aca859a303fdca30370f42b8c611d9cf0dedf4b"
+                "reference": "a76afa4035931be0c78ca8efc6abf3902362f437"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9aca859a303fdca30370f42b8c611d9cf0dedf4b",
-                "reference": "9aca859a303fdca30370f42b8c611d9cf0dedf4b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a76afa4035931be0c78ca8efc6abf3902362f437",
+                "reference": "a76afa4035931be0c78ca8efc6abf3902362f437",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +685,7 @@
                 "ext-fileinfo": "*",
                 "mockery/mockery": "~0.9",
                 "phpspec/phpspec": "^2.2",
-                "phpunit/phpunit": "~4.8 || ~5.0"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -570,7 +742,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-06-03 19:11:39"
+            "time": "2016-07-18 12:22:57"
         },
         {
             "name": "monolog/monolog",
@@ -839,6 +1011,55 @@
                 "random"
             ],
             "time": "2016-03-18 20:34:03"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2015-05-04 20:22:00"
         },
         {
             "name": "psr/log",
@@ -1831,6 +2052,154 @@
                 "environment"
             ],
             "time": "2016-06-14 14:14:52"
+        },
+        {
+            "name": "zenapply/laravel-shortener",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zenapply/laravel-shortener.git",
+                "reference": "84ae29b7b01ed021002d0608eba0d3ebcdff2015"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zenapply/laravel-shortener/zipball/84ae29b7b01ed021002d0608eba0d3ebcdff2015",
+                "reference": "84ae29b7b01ed021002d0608eba0d3ebcdff2015",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0",
+                "php": "^5.4|^7.0",
+                "zenapply/php-bitly": "^2.0",
+                "zenapply/php-google-shortener": "^1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.1",
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zenapply\\Shortener\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tyler Arbon",
+                    "email": "tylercd100@gmail.com"
+                }
+            ],
+            "homepage": "https://github.com/zenapply/laravel-shortener",
+            "keywords": [
+                "laravel",
+                "shortener",
+                "tylercd100",
+                "url",
+                "url shortener",
+                "zenapply"
+            ],
+            "time": "2016-05-27 21:56:17"
+        },
+        {
+            "name": "zenapply/php-bitly",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zenapply/php-bitly.git",
+                "reference": "d810f579de7c08884cf19c3f3c4c96db11e532d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zenapply/php-bitly/zipball/d810f579de7c08884cf19c3f3c4c96db11e532d1",
+                "reference": "d810f579de7c08884cf19c3f3c4c96db11e532d1",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": "^5.5.9|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zenapply\\Bitly\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tyler Arbon",
+                    "email": "tylercd100@gmail.com"
+                }
+            ],
+            "description": "Easily shorten URLs in PHP",
+            "homepage": "https://github.com/zenapply/php-bitly",
+            "keywords": [
+                "bitly",
+                "shorten",
+                "tylercd100",
+                "url",
+                "zenapply"
+            ],
+            "time": "2016-05-12 01:51:37"
+        },
+        {
+            "name": "zenapply/php-google-shortener",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zenapply/php-google-shortener.git",
+                "reference": "c4a7a4f8669d15983c39591b8be21b9c17af863d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zenapply/php-google-shortener/zipball/c4a7a4f8669d15983c39591b8be21b9c17af863d",
+                "reference": "c4a7a4f8669d15983c39591b8be21b9c17af863d",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": "^5.5.9|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zenapply\\GoogleShortener\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tyler Arbon",
+                    "email": "tylercd100@gmail.com"
+                }
+            ],
+            "description": "Easily shorten URLs in PHP",
+            "homepage": "https://github.com/zenapply/php-google-shortener",
+            "keywords": [
+                "bitly",
+                "google url shortener",
+                "shorten",
+                "tylercd100",
+                "url",
+                "zenapply"
+            ],
+            "time": "2016-05-27 22:46:46"
         }
     ],
     "packages-dev": [
@@ -2499,16 +2868,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.26",
+            "version": "4.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74"
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fc1d8cd5b5de11625979125c5639347896ac2c74",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c062dddcb68e44b563f66ee319ddae2b5a322a90",
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90",
                 "shasum": ""
             },
             "require": {
@@ -2567,7 +2936,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-05-17 03:09:28"
+            "time": "2016-07-21 06:48:14"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
