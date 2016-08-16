@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+
+@if ($message !== null)
+    <div class="alert alert-success alert-dismissible" role="alert">{{ $message }}</div>
+@endif
+
 <div class="container-fluid">
     <div class="row">
         <table class="table table-striped table-bordered table-condensed">

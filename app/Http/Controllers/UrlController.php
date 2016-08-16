@@ -11,10 +11,13 @@ class UrlController extends Controller
     public function manageUrl(Request $request)
     {
         if ($request->isMethod('post')) {
-            $url = new Url();
-            $url->original_url = $request->input('url');
-            $url->shortened_url = Shortener::shorten($request->input('url'));
-            $url->save();
+            if ($request->has('url')) {
+                $url = new Url();
+                $url->original_url = $request->input('url');
+                $url->shortened_url = Shortener::shorten($request->input('url'));
+                $url->save();
+                \Session::flash('message', 'Record saved');
+            }
 
             return redirect('/view-urls');
         }
@@ -26,6 +29,9 @@ class UrlController extends Controller
     {
         $urls = Url::all();
 
-        return view('url.view', ['urls' => $urls]);
+        return view('url.view', [
+            'urls' => $urls,
+            'message' => \Session::get('message')
+        ]);
     }
 }
