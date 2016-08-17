@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Url;
 use Illuminate\Http\Request;
+use Illuminate\Session\Store;
+use Illuminate\Validation\Factory as Validator;
 use Zenapply\Shortener\Facades\Shortener;
 
 class UrlController extends Controller
 {
-    public function manageUrl(Request $request)
+    public function manageUrl(Request $request, Store $session, Validator $validator)
     {
         if ($request->isMethod('post')) {
             if ($request->has('url')) {
