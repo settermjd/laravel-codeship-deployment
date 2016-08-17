@@ -5,12 +5,27 @@ namespace App\Http\Controllers;
 use App\Url;
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
-use Illuminate\Validation\Factory as Validator;
 use Zenapply\Shortener\Shortener;
 
+/**
+ * Class UrlController
+ * @package App\Http\Controllers
+ */
 class UrlController extends Controller
 {
-    public function manageUrl(Request $request, Store $session, Validator $validator)
+    /**
+     * Manage URLs
+     *
+     * This includes simply rendering the form for adding them, or going through the
+     * process of actually adding them.
+     *
+     * @param Request   $request
+     * @param Store     $session
+     * @param Shortener $shortener
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function manageUrl(Request $request, Store $session, Shortener $shortener)
     {
         if ($request->isMethod('post')) {
             if ($request->has('url')) {
