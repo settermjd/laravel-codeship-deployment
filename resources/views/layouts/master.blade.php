@@ -30,6 +30,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
                     <li><a href="/view-urls">View URLs</a></li>
+                    <li><a href="/manage-url">Add URL</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
