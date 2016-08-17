@@ -25,13 +25,20 @@ class UrlController extends Controller
         return view('url.manage', []);
     }
 
-    public function viewUrls()
+    /**
+     * View all stored URLs
+     *
+     * @param Store $session
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function viewUrls(Store $session)
     {
         $urls = Url::all();
 
         return view('url.view', [
-            'urls' => $urls,
-            'message' => \Session::get('message')
+            'urls'    => $urls,
+            'message' => $session->get('message'),
         ]);
     }
 
