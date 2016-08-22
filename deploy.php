@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__ . 'vendor/autoload.php';
-require __DIR__ . 'vendor/deployer/deployer/recipe/composer.php';
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/deployer/deployer/recipe/composer.php';
 
 // Whether to use sudo or not during deployment
 set("sudo_for_composer_is_wrong", true);
