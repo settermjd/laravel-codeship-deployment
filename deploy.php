@@ -20,6 +20,18 @@ set('repository', getenv('REPOSITORY'));
 // The number of old releases to retain, in addition to the current release
 set('keep_releases', getenv('RELEASES'));
 
+task('deploy:copy-env-file', function () {
+    $deployPath = '/var/www/html/current';
+    $envFile = '/opt/apps/config/.env';
+    run("cp {$envFile} {$deployPath}");
+})->desc("Copy the env file");
+
+task('deploy:artisan-make', function () {
+    $deployPath = env('/var/www/html/current');
+    cd($deployPath);
+    run("php artisan make");
+})->desc("Run Artisan make");
+
 // A custom task for when everything's finished.
 task('deploy:done', function () {
     write('Deploy done!');
@@ -30,7 +42,9 @@ task('deploy', [
     'deploy:prepare',
     'deploy:release',
     'deploy:update_code',
+    'deploy:copy-env-file',
     'deploy:vendors',
+    'deploy:artisan-make',
     'deploy:symlink',
     'cleanup'
 ])->desc("The main deployment process");
